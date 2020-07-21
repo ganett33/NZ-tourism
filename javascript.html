@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Xtreme Tour</title>
+     <meta charset="UTF-8" >
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+     <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+     <link rel="icon" type="image/ico" href="Images/logo.png" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="CSS/style_gallery.css" >    
+     <style>
+      table {
+          border-collapse: collapse;
+          border: 2px black solid;
+          font: 13px sans-serif;
+          width: 50%;  
+          margin-left: auto;
+          margin-right:auto;
+          color: #101080;                                     
+      }
+      td {
+          border: 1px black solid;
+          padding: 5px;
+          height:20px;
+          }          
+      tr {
+          text-align:center;
+          padding: 5px;
+          }                          
+div1 { 
+text-align:center;
+}
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  </style>
+    </head>
+<body>
+<!-- Navigation -->
+<header>
+  <div class="header">
+    <div class="navbar">
+      <a href="home.html">
+        <img src="images/XtremeTour1.png" ></a>
+      <a href="home.html" >Home</a>      
+      <a href="javaScript.html" class="active" >JavaScript</a>
+      <a href="video.html">Video</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="placestovisit.html">Place to Visit</a>
+      <a href="reference.html">Reference</a>
+      </div>
+
+<!-- Main picture -->
+<div class="section">
+  <img class="m-pic" src="Images/javascript/csv-m.jpg" >
+</div>
+</div>
+</header>
+
+<!-- JAVASCRIPT -->
+<div1>
+<h3>
+  This files show you 10 the most attraction places in New Zealand.<br>
+  <br>
+  </h3><br>
+  </div>
+  
+  <p align="center"><button type="button" onclick="mytable()">RUN_CSV_IMPORT_SCRIPT</button></p>
+  
+  <script src="d3.v3.min.js"></script> 
+  
+  <script type="text/javascript"charset="utf-8"> 
+  function mytable() {
+              d3.text("data.csv", function(data) {
+                  var parsedCSV = d3.csv.parseRows(data);
+                  var container = d3.select("header")
+                      .append("table")
+                      .selectAll("tr")
+                          .data(parsedCSV).enter()
+                         .append("tr")
+                      .selectAll("td")
+                          .data(function(d) { return d; }).enter()
+                          .append("td")
+                          .text(function(d) { return d; });
+              });
+    }
+          </script>
+   
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <a href="home">&copy; Xtreme Tour |</a>
+        <a href="#"> Privacy Policy |</a>
+        <a href="#"> Sitemap |</a>
+        <a href="#"> Contact |</a>
+        <a href="https://jongbolee.co.nz">  JongBo Lee (30001192)</a>
+      </p> 
+     </div>
+    </div> 
+ 
+  <!--Sticky socialbar-->
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+    <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  </div>
+  </body>
+  </html>

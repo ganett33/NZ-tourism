@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Xtreme Tour</title>
+     <meta charset="UTF-8" >
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+     <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+     <link rel="icon" type="image/ico" href="Images/logo.png" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="CSS/style_home.css" >    
+</head>
+
+<body>
+<!-- Navigation -->
+<header>
+  
+  <div class="header">     
+    <div class="navbar">
+      <a href="home.html">
+        <img src="images/XtremeTour1.png" ></a>
+      <a href="home.html" >Home</a>      
+      <a href="javaScript.html" >JavaScript</a>
+      <a href="video.html">Video</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="placestovisit.html">Place to Visit</a>
+      <a href="reference.html" >Reference</a>
+      </div>
+    
+ <!-- Slide Show -->
+ <section>
+  <img class="mySlides" src="images/jetboat1.jpg" >
+  <img class="mySlides" src="images/offroad1.png" >
+  <img class="mySlides" src="images/skydiving1.png" >
+</section>
+</div>
+</header>
+<script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+  </script>
+  
+<!-- Journey -->
+<div class="journey">
+  <div class="clearfix">
+  <h3>Choose your journey with US</h3>
+  <h4>What is your favourite?</h4>    
+  
+  <div class="responsive">
+    <div class="gallery">    
+        <img src="Images/off-road.jpg">    
+      <span class="desc">Off-Road</span>
+    </div>
+  </div>  
+  <div class="responsive">
+    <div class="gallery">    
+        <img src="Images/bungy.jpg" >    
+      <span class="desc">Bungy Jump</span>
+    </div>
+  </div>  
+  <div class="responsive">
+    <div class="gallery">    
+        <img src="Images/rafting.jpg" >    
+      <span class="desc">Rafting</span>
+    </div>
+  </div>    
+  <div class="responsive">
+    <div class="gallery">    
+      <img src="Images/skydive.jpg" >
+    <span class="desc">Skydive</sapn>
+    </div>
+  </div>
+</div>
+<!-- Menu -->
+<div class="clearfix">
+  <div class="responsive">
+    <div class="grid">
+      <h3>IMAGIN YOUR NEXT JOURNEY</h3>
+      <p><b>Now that the world is standing still, what are you dreaming of?</b></p> 
+      <p><b>Across New Zealand, you can find everything from untamed wilderness to rich culture.</b></p>
+      <p><b>Find inspiration in towering mountains and mist-cloaked fjords.</b></p> 
+      <p><b>Serenity in golden of laid-back charm. When the world starts to move again, find your dream destination here.</b></p>
+      <br>
+      <div class="tiki">
+      <img src="images/'A Tiki Tour of New Zealand No.2 Stamp Sheet.jpg" width="auto" height="450" >       
+      </div>
+      <br>
+    </div>
+  </div>
+  <div class="article">
+    <img src="images/food.jpg"  >
+  <h4>Foodies Unite</h4>
+  <p>Explore the many Dining destinations through New Zealand
+    <a class="button" href="#"><button class="button">More Dining</button></a></p>    
+ <br>
+ <br>
+ <img src="images/stay.jpg"  >
+ <h4>Stay Healthy & Be Well</h4>
+ <p>Take care of yourself and the New Zealand community
+  <a class="button" href="#"><button class="button">Stay Well</button></a></p>
+  </div>
+</div>  
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <a href="home">&copy; Xtreme Tour |</a>
+        <a href="#"> Privacy Policy |</a>
+        <a href="#"> Sitemap |</a>
+        <a href="#"> Contact |</a>
+        <a href="https://jongbolee.co.nz">  JongBo Lee (30001192)</a>
+      </p> 
+     </div> 
+  
+  <!--Sticky socialbar-->
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+    <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  </div>
+ </body>
+</html>
